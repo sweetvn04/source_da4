@@ -9,7 +9,7 @@ import os
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 model_path = "source/Face_Yolo_50ep.pt"
-model_mbnet_path = "source/Age_gender_MBNet_50ep.h5"
+model_mbnet_path = "source/mobilenet50ep_ver2.h5"
 # Load YOLO model (face detector)
 yolo_model = YOLO(model_path)
 
@@ -76,8 +76,8 @@ def predict_age_gender(face_crop, model):
 
 # Track với ByteTrack
 results = yolo_model.track(
-    # source="http://192.168.1.5:4747/video",  # external cam
-    source=0,  # webcam
+    source="http://192.168.1.135:4747/video",  # external cam
+    # source=0,  # webcam
     tracker="bytetrack.yaml",
     stream=True,
     show=False
