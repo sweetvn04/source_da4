@@ -76,8 +76,8 @@ def predict_age_gender(face_crop, model):
 
 # Track với ByteTrack
 results = yolo_model.track(
-    source="http://192.168.1.135:4747/video",  # external cam
-    # source=0,  # webcam
+    # source="http://192.168.1.135:4747/video",  # external cam
+    source=0,  # webcam
     tracker="bytetrack.yaml",
     stream=True,
     show=False
