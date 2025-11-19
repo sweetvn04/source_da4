@@ -8,8 +8,8 @@ import os
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
-model_path = "source/Face_Yolo_50ep.pt"
-model_mbnet_path = "source/mobilenet50ep_ver2.h5"
+model_path = "./Face_Yolo_50ep.pt"
+model_mbnet_path = "./mobilenet50ep_ver2.h5"
 # Load YOLO model (face detector)
 yolo_model = YOLO(model_path)
 
